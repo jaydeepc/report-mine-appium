@@ -1,0 +1,147 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Report</title>
+    <script type = "text/javascript"
+            src = "../js/jquery-1.12.1.min.js"></script>
+    <script type = "text/javascript" language = "javascript" src="../js/setup.js"></script>
+    <script type = "text/javascript" language = "javascript" src="../js/parser.js"></script>
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="../js/amcharts.js"></script>
+    <script type="text/javascript" src="../js/pie.js"></script>
+    <script type="text/javascript" src="../js/swipe.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap-vertical-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/chart_style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/pricing-tables.css">
+    <link rel="stylesheet" href="../css/card_open.css">
+    <link rel="stylesheet" href="../css/smry_button.css">
+    <link rel="stylesheet" href="../css/extra.css">
+    <link rel="stylesheet" href="../css/bubble.css">
+    <link rel="stylesheet" href="../css/logo.css">
+
+    <script src="../js/justgage.js"></script>
+    <script src="../js/raphael-2.1.4.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+
+    <!--[if lte IE 9]><link rel="stylesheet" href="../css/ie.css"><![endif]-->
+
+    <style>
+        .amcharts-chart-div {
+            width: 1500px !important;
+            text-align: center !important;
+        }
+
+        svg path{
+            width: 1000px !important;
+            text-align: center !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-vertical-left">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="summary.html">
+          <i class="fa fa-fw fa-lg fa-home"></i> 
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="env.html">
+          <i class="fa fa-fw fa-lg fa-envira" aria-hidden="true"></i>
+          <span>Environment</span>
+        </a>
+      </li>
+      <li>
+        <a href="bubble.html">
+          <i class="fa fa-fw fa-lg fa-comments-o" aria-hidden="true"></i>
+          <span>Facts</span>
+        </a>
+      </li>
+      <li>
+        <a href="modules.html">
+          <i class="fa fa-fw fa-lg fa-newspaper-o"></i>
+          <span>Specs Summary</span>
+        </a>
+      </li>
+      <li>
+        <a href="test_execution_time_graph.html">
+            <i class="fa fa-fw fa-lg fa-line-chart"></i>
+            <span>Test trends</span>
+        </a>
+      </li>
+    </ul></nav>
+<br>
+<br>
+<div id="heading_common">
+    <h1>Summary of the Suite Run</h1>
+    <img class="logo" src="../images/logo_reportmine.png" />
+    <hr width="100%">
+</div>
+<div id="heading_common"><p>Hover over the pie to see the numbers</p></div>
+<br>
+<br>
+<p style="height: 10px;"></p>
+<div class='slider' style="width: 721 px">
+  <div id = "stage" style = "">
+      <br>
+    <table class="pricing-table">
+        <thead>
+        <tr class="plan">
+            <td class="green">
+                <h2>Pass</h2>
+                <em>Happy Tests</em>
+            </td>
+            <td class="red">
+                <h2>Failed</h2>
+                <em>Assertions went wrong</em>
+            </td>
+            <td class="orange">
+                <h2>Errors</h2>
+                <em>Exceptions</em>
+            </td>
+            <td class="yellow">
+                <h2>Skips</h2>
+                <em>Did not run</em>
+            </td>
+
+        </tr>
+        <tr class="price">
+            <td class="green">
+                <a href="test_result.html?status=passed">Check</a>
+            </td>
+            <td class="red">
+                <a href="test_result.html?status=failed">Check</a>
+            </td>
+            <td class="orange">
+                <a href="test_result.html?status=error">Check</a>
+            </td>
+            <td class="yellow">
+                <a href="test_result.html?status=skipped">Check</a>
+            </td>
+        </tr>
+        </thead>
+    </table>
+      <p style="height: 30px;"></p>
+    <div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+  </div>
+</div>
+
+
+<p style="height: 10px;"></p><br>
+<script type="text/javascript" src="../js/swiping.js"></script>
+<!--<div id="module-link"><a href="modules.html" align="center">Check the Modules Report</a></div>-->
+<br>
+
+
+<footer>
+</footer>
+</body>
+
+</html>
